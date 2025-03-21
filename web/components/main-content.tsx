@@ -38,7 +38,7 @@ export function MainContent() {
               placeholder="Search your favorite framework"
               className="w-full bg-[#545c78]/30 rounded-full py-3 pl-10 pr-24 text-white placeholder:text-[#545c78]"
             />
-            <button className="absolute right-1 top-1 bottom-1 px-6 bg-gradient-to-r from-[#60fefe]/20 to-[#60fefe]/40 text-[#0f101a] font-medium rounded-full hover:from-[#60fefe]/30 hover:to-[#60fefe]/50 transition-colors">
+            <button className="absolute right-1 top-1 bottom-1 px-6 bg-gradient-to-r from-[#60fefe]/20 to-[#60fefe]/40 text-[#60fefe] font-medium rounded-full hover:from-[#60fefe]/30 hover:to-[#60fefe]/50 transition-colors">
               GO
             </button>
           </div>
