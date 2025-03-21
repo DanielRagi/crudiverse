@@ -4,6 +4,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Crudiverse',
   description: 'Simple CRUD guides for diverse technologies',
+  icons: {
+    icon: '/favicon.png',
+  }
 }
 
 export default function RootLayout({
