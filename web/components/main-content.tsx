@@ -1,4 +1,5 @@
-import { Search, Github } from "lucide-react"
+import Image from "next/image"
+import { Search, Github, Linkedin } from "lucide-react"
 import { DatabaseIcon } from "@/components/database-icon"
 
 export function MainContent() {
@@ -6,27 +7,24 @@ export function MainContent() {
     <main className="flex-1 h-[calc(100vh-64px)] overflow-y-auto custom-scrollbar">
       <div className="p-6">
         {/* Hero Section */}
-        <div className="bg-[#1e2130] rounded-lg p-10 mb-8">
-          <div className="flex items-center">
+        <div className="bg-gradient-to-b from-[#194242] to-[#292441] rounded-lg p-10 mb-8">
+          <div className="flex items-center justify-center gap-6">
             <div className="relative h-40 w-40 flex-shrink-0">
-              <div className="absolute w-4 h-4 bg-[#60fefe] rounded-full top-10 left-0"></div>
-              <div className="absolute w-4 h-4 bg-[#60fefe] rounded-full bottom-10 left-0"></div>
-              <div className="absolute w-4 h-4 bg-purple-500 rounded-full top-0 right-10"></div>
-              <div className="absolute w-4 h-4 bg-purple-500 rounded-full bottom-0 right-10"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <DatabaseIcon className="h-24 w-24 text-[#60fefe]/80" />
-              </div>
+              <Image
+                src="/hero_logo.png?height=160&width=160"
+                alt="Crudiverse Logo"
+                width={160}
+                height={160}
+              />
             </div>
 
-            <div className="flex-1 flex items-center justify-center">
-              <div className="text-center">
-                <h1 className="text-4xl font-bold mb-2">BUILD CRUD APPS</h1>
-                <p className="text-[#b3b3b3]">
-                  The definitive guide to implementate CRUD
-                  <br />
-                  APIs and consumptions
-                </p>
-              </div>
+            <div className="text-center">
+              <h1 className="text-4xl font-bold mb-2">BUILD CRUD APPS</h1>
+              <p className="text-[#b3b3b3]">
+                The definitive guide to implementate CRUD
+                <br />
+                APIs and consumptions
+              </p>
             </div>
           </div>
 
@@ -39,7 +37,7 @@ export function MainContent() {
               placeholder="Search your favorite framework"
               className="w-full bg-[#545c78]/30 rounded-full py-3 pl-10 pr-24 text-white placeholder:text-[#545c78]"
             />
-            <button className="absolute right-1 top-1 bottom-1 px-6 bg-[#60fefe] text-[#0f101a] font-medium rounded-full">
+            <button className="absolute right-1 top-1 bottom-1 px-6 bg-gradient-to-r from-[#60fefe]/20 to-[#60fefe]/40 text-[#0f101a] font-medium rounded-full hover:from-[#60fefe]/30 hover:to-[#60fefe]/50 transition-colors">
               GO
             </button>
           </div>
@@ -81,7 +79,7 @@ export function MainContent() {
             </div>
             <div className="flex justify-center gap-4 mt-2">
               <Github className="h-5 w-5 text-[#b3b3b3] hover:text-white cursor-pointer transition-colors" />
-              <div className="h-5 w-5 bg-[#b3b3b3] rounded hover:bg-white cursor-pointer transition-colors"></div>
+              <Linkedin className="h-5 w-5 text-[#b3b3b3] hover:text-white cursor-pointer transition-colors" />
             </div>
           </div>
         </div>

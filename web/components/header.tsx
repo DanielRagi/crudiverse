@@ -8,14 +8,19 @@ export function Header() {
       <div className="flex items-center gap-2">
         <div className="relative h-10 w-10">
           <Image
-            src="/placeholder.svg?height=40&width=40"
+            src="/header_logo.png?height=40&width=40"
             alt="Crudiverse Logo"
             width={40}
             height={40}
             className="text-[#60fefe]"
           />
         </div>
-        <span className="text-xl font-semibold">Crudiverse</span>
+        <Image
+            src="/header_name.png?height=28&width=97"
+            alt="Crudiverse Name"
+            width={97}
+            height={28}
+          />
       </div>
 
       <div className="flex-1 max-w-xl mx-6">

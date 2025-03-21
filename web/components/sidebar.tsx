@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Github, ChevronDown } from "lucide-react"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
@@ -19,9 +20,12 @@ export function Sidebar() {
               <CollapsibleTrigger className="w-full">
                 <div className="flex items-center justify-between p-2 hover:bg-[#1e2130]/50 rounded-md transition-colors cursor-pointer">
                   <div className="flex items-center gap-3">
-                    <div className="h-6 w-6 bg-[#60fefe]/20 rounded flex items-center justify-center">
-                      <div className="h-4 w-4 bg-[#60fefe]/80 rounded-sm"></div>
-                    </div>
+                    <Image
+                      src="/sidebar_database.png?height=28&width=97"
+                      alt="DB"
+                      width={24}
+                      height={24}
+                    />
                     <span className="font-medium">Examples Database</span>
                   </div>
                   <ChevronDown className="h-5 w-5 text-[#545c78] transition-transform ui-open:rotate-180" />
@@ -44,9 +48,12 @@ export function Sidebar() {
               <CollapsibleTrigger className="w-full">
                 <div className="flex items-center justify-between p-2 hover:bg-[#1e2130]/50 rounded-md transition-colors cursor-pointer">
                   <div className="flex items-center gap-3">
-                    <div className="h-6 w-6 bg-[#60fefe]/20 rounded flex items-center justify-center">
-                      <div className="h-4 w-4 bg-[#60fefe]/80 rounded-sm"></div>
-                    </div>
+                    <Image
+                      src="/sidebar_api.png?height=28&width=97"
+                      alt="API"
+                      width={24}
+                      height={24}
+                    />
                     <span className="font-medium">API Implementation</span>
                   </div>
                   <ChevronDown className="h-5 w-5 text-[#545c78] transition-transform ui-open:rotate-180" />
@@ -72,9 +79,12 @@ export function Sidebar() {
               <CollapsibleTrigger className="w-full">
                 <div className="flex items-center justify-between p-2 hover:bg-[#1e2130]/50 rounded-md transition-colors cursor-pointer">
                   <div className="flex items-center gap-3">
-                    <div className="h-6 w-6 bg-[#60fefe]/20 rounded flex items-center justify-center">
-                      <div className="h-4 w-4 bg-[#60fefe]/80 rounded-sm"></div>
-                    </div>
+                    <Image
+                      src="/sidebar_ui.png?height=28&width=97"
+                      alt="UI"
+                      width={24}
+                      height={24}
+                    />
                     <span className="font-medium">API Integration</span>
                   </div>
                   <ChevronDown className="h-5 w-5 text-[#545c78] transition-transform ui-open:rotate-180" />
@@ -101,10 +111,10 @@ export function Sidebar() {
 
       {/* Fixed footer */}
       <div className="p-6 border-t border-[#1e2130] bg-[#1e2130]/30">
-        <Link
-          href="#"
-          className="flex items-center justify-center gap-2 bg-[#60fefe]/20 text-[#60fefe] px-6 py-3 rounded-lg hover:bg-[#60fefe]/30 transition-colors w-full"
-        >
+      <Link
+        href="#"
+        className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#60fefe]/20 to-[#60fefe]/40 text-[#60fefe] px-6 py-3 rounded-lg hover:from-[#60fefe]/30 hover:to-[#60fefe]/50 transition-colors w-full"
+      >
           <Github className="h-5 w-5" />
           <span className="font-medium">VISIT GITHUB</span>
         </Link>
