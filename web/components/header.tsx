@@ -32,7 +32,7 @@ export function Header() {
           </div>
           <input
             type="text"
-            placeholder="Search your favorite framework"
+            placeholder="Search for a framework or technology"
             className="w-full bg-[#545c78]/30 rounded-full py-2 pl-10 pr-4 text-sm text-white placeholder:text-[#545c78]"
           />
         </div>

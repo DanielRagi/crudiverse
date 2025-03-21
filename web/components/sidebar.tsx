@@ -26,7 +26,7 @@ export function Sidebar() {
                       width={24}
                       height={24}
                     />
-                    <span className="font-medium">Examples Database</span>
+                    <span className="font-medium">Database Examples</span>
                   </div>
                   <ChevronDown className="h-5 w-5 text-[#545c78] transition-transform ui-open:rotate-180" />
                 </div>
@@ -54,7 +54,7 @@ export function Sidebar() {
                       width={24}
                       height={24}
                     />
-                    <span className="font-medium">API Implementation</span>
+                    <span className="font-medium">Backend Implementations</span>
                   </div>
                   <ChevronDown className="h-5 w-5 text-[#545c78] transition-transform ui-open:rotate-180" />
                 </div>
@@ -85,7 +85,7 @@ export function Sidebar() {
                       width={24}
                       height={24}
                     />
-                    <span className="font-medium">API Integration</span>
+                    <span className="font-medium">Frontend Integrations</span>
                   </div>
                   <ChevronDown className="h-5 w-5 text-[#545c78] transition-transform ui-open:rotate-180" />
                 </div>
@@ -117,7 +117,7 @@ export function Sidebar() {
         className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#60fefe]/20 to-[#60fefe]/40 text-[#60fefe] px-6 py-3 rounded-lg hover:from-[#60fefe]/30 hover:to-[#60fefe]/50 transition-colors w-full"
       >
           <Github className="h-5 w-5" />
-          <span className="font-medium">VISIT GITHUB</span>
+          <span className="font-medium">VIEW ON GITHUB</span>
         </Link>
       </div>
     </aside>
