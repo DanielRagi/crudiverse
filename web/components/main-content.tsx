@@ -35,7 +35,7 @@ export function MainContent() {
             </div>
             <input
               type="text"
-              placeholder="Search for a framework or technology"
+              placeholder="Find your favorite framework or technology"
               className="w-full bg-[#545c78]/30 rounded-full py-3 pl-10 pr-24 text-white placeholder:text-[#545c78]"
             />
             <button className="absolute right-1 top-1 bottom-1 px-6 bg-gradient-to-r from-[#60fefe]/20 to-[#60fefe]/40 text-[#60fefe] font-medium rounded-full hover:from-[#60fefe]/30 hover:to-[#60fefe]/50 transition-colors">
@@ -55,7 +55,7 @@ export function MainContent() {
         </div>
 
         <div className="bg-[#1e2130]/70 rounded-lg p-6 mb-6">
-          <h3 className="text-xl font-semibold mb-2">Build a UI to consume an API</h3>
+          <h3 className="text-xl font-semibold mb-2">Build a UI to interact with an API</h3>
           <p className="text-[#b3b3b3]">
             Choose your favorite frontend framework and follow a simple guide to create a functional user interface that interacts with an existing API.
           </p>
