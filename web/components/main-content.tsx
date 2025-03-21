@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Search, Github, Linkedin } from "lucide-react"
 import { DatabaseIcon } from "@/components/database-icon"
 
@@ -74,12 +75,11 @@ export function MainContent() {
         <div className="flex justify-center items-center mb-6">
           <div className="text-center">
             <div className="text-[#b3b3b3]">
-              Created by: <span className="text-white">Daniel Ramirez</span> -{" "}
-              <span className="text-[#545c78]">https://www.danielramirez.pro/</span>
+              Created by: <Link target="_blank" href="https://www.danielramirez.pro/"><span className="text-white">Daniel Ramirez</span></Link>
             </div>
             <div className="flex justify-center gap-4 mt-2">
-              <Github className="h-5 w-5 text-[#b3b3b3] hover:text-white cursor-pointer transition-colors" />
-              <Linkedin className="h-5 w-5 text-[#b3b3b3] hover:text-white cursor-pointer transition-colors" />
+              <Link target="_blank" href="https://github.com/DanielRagi"><Github className="h-5 w-5 text-[#b3b3b3] hover:text-white cursor-pointer transition-colors" /></Link>
+              <Link target="_blank" href="https://www.linkedin.com/in/danielramg/"><Linkedin className="h-5 w-5 text-[#b3b3b3] hover:text-white cursor-pointer transition-colors" /></Link>
             </div>
           </div>
         </div>

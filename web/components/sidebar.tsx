@@ -112,7 +112,8 @@ export function Sidebar() {
       {/* Fixed footer */}
       <div className="p-6 border-t border-[#1e2130] bg-[#1e2130]/30">
       <Link
-        href="#"
+        target="_blank"
+        href="https://github.com/DanielRagi/crudiverse"
         className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#60fefe]/20 to-[#60fefe]/40 text-[#60fefe] px-6 py-3 rounded-lg hover:from-[#60fefe]/30 hover:to-[#60fefe]/50 transition-colors w-full"
       >
           <Github className="h-5 w-5" />

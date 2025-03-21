@@ -5,23 +5,25 @@ import { Search, Github, Globe } from "lucide-react"
 export function Header() {
   return (
     <header className="h-16 border-b border-[#1e2130] px-6 py-3 flex items-center justify-between">
-      <div className="flex items-center gap-2">
-        <div className="relative h-10 w-10">
+      <Link href="/">
+        <div className="flex items-center gap-2">
+          <div className="relative h-10 w-10">
+            <Image
+              src="/header_logo.png?height=40&width=40"
+              alt="Crudiverse Logo"
+              width={40}
+              height={40}
+              className="text-[#60fefe]"
+            />
+          </div>
           <Image
-            src="/header_logo.png?height=40&width=40"
-            alt="Crudiverse Logo"
-            width={40}
-            height={40}
-            className="text-[#60fefe]"
-          />
+              src="/header_name.png?height=28&width=97"
+              alt="Crudiverse Name"
+              width={97}
+              height={28}
+            />
         </div>
-        <Image
-            src="/header_name.png?height=28&width=97"
-            alt="Crudiverse Name"
-            width={97}
-            height={28}
-          />
-      </div>
+      </Link>
 
       <div className="flex-1 max-w-xl mx-6">
         <div className="relative">
@@ -44,7 +46,9 @@ export function Header() {
           About
         </Link>
         <Globe className="h-5 w-5 text-[#b3b3b3] hover:text-white cursor-pointer transition-colors" />
-        <Github className="h-5 w-5 text-[#b3b3b3] hover:text-white cursor-pointer transition-colors" />
+        <Link target="_blank" href="https://github.com/DanielRagi/crudiverse">
+          <Github className="h-5 w-5 text-[#b3b3b3] hover:text-white cursor-pointer transition-colors" />
+        </Link>
       </div>
     </header>
   )
