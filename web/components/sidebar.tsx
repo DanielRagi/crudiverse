@@ -1,18 +1,51 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
-import { Github, ChevronDown } from "lucide-react"
+import { Github, ChevronDown, X } from "lucide-react"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { useSidebar } from "./sidebar-context"
+import { useEffect } from "react"
+import { usePathname } from "next/navigation"
 
 export function Sidebar() {
+  const { isSidebarOpen, closeSidebar } = useSidebar()
+  const pathname = usePathname()
+
+  // Close sidebar on navigation (mobile only)
+  useEffect(() => {
+    if (window.innerWidth < 1024) {
+      closeSidebar()
+    }
+  }, [pathname, closeSidebar])
+
   return (
-    <aside className="w-[400px] bg-[#1e2130]/30 h-[calc(100vh-64px)] flex flex-col">
+    <aside
+      className={`
+        w-[320px] bg-[#1e2130]/30 h-[calc(100vh-64px)] flex flex-col
+        fixed inset-y-16 left-0 z-30 transform transition-transform duration-300 ease-in-out
+        lg:relative lg:inset-y-0 lg:transform-none lg:transition-none
+        ${isSidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
+      `}
+    >
+      {/* Mobile close button */}
+      <div className="flex justify-end p-4 lg:hidden">
+        <button
+          onClick={closeSidebar}
+          className="text-[#b3b3b3] hover:text-white transition-colors"
+          aria-label="Close sidebar"
+        >
+          <X className="h-6 w-6" />
+        </button>
+      </div>
+
       {/* Scrollable content area with custom scrollbar */}
       <div className="flex-1 overflow-y-auto custom-scrollbar">
         <div className="p-6">
           <h2 className="text-2xl font-semibold mb-6">Explore</h2>
 
           <div className="space-y-6">
-            <Link href="/">
+            <Link href="/" onClick={() => window.innerWidth < 1024 && closeSidebar()}>
               <div className="bg-[#1e2130]/70 rounded-lg p-4 hover:bg-[#1e2130] transition-colors cursor-pointer">
                 <h3 className="text-xl font-medium">Get Started</h3>
               </div>
